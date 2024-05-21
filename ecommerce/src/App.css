@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: #EEE2DC; 
+    height: 100vh; 
+    width: 100vw;
+}
+
+h1{
+    font-size: 3rem;
+    text-decoration: underline;
+    text-align: center;     
+    margin-top: 20px;  
+    color: #AC3B61;
+}
+
+.itemSection{
+    max-width: 150px;
+    margin: 10px 0 30px 20px;
+    text-align: center;
+    border: 1px solid #BAB2B5;
+    border-radius: 10px 0 10px 0;
+    padding: 10px 30px;
+    background-color: #EDC7B7;
+}
+
+h3{
+    color: #123C69;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+p{
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+button{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.quantity{
+    border: 2px solid #AC3B61;
+    padding: 1px 10px;
+    background-color: white;
+}
+
+.notify{
+    font-size: 16px;
+}
+
+.notify.ranOut{
+    font-size: 24px;
+    color: red;
+}
