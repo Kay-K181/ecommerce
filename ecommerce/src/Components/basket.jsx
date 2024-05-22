@@ -9,7 +9,7 @@ export default function Basket({total, setPage}){
     return(
         <div>
             <Timer/>
-            <div>Please pay £{total} within the 1 minute timer.</div>
+            <div>Please pay £{total} within the 2 minute timer.</div>
             <button onClick={cancel}>Cancel order</button>
 
         </div>        
