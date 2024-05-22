@@ -58,8 +58,8 @@ export default function Ecommerce({qty, setQty, total, setTotal, page, setPage})
                     <div className="itemSection" key={info.id}>
                         <h3>{info.name}</h3>
                         <p>£{info.price}</p>
-                        <button className="decreaseBtn" onClick={() => subtract(info.id)}>-</button>
-                        <button className="increaseBtn" onClick={() => add(info.id)}>+</button>
+                        <button className="decreaseBtn" onClick={() => subtract(info.id)}>Remove from cart</button>
+                        <button className="increaseBtn" onClick={() => add(info.id)}>Add to cart</button>
                         <button className="reset" onClick={() => reset(info.id)}>Reset</button>
                         <p>Quantity: <span className="quantity">{info.qty}</span></p>   
                     </div>
