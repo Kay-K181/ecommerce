@@ -1,30 +1,34 @@
 import React from "react";
 import Ecommerce from "./Components/ecommerce";
 import Basket from "./Components/basket";
+import ListItems from "../src/Components/listItems";
 import { useState } from "react";
 import './App.css';
 
 export default function App(){
-  const [qty, setQty] = useState(0);
-  const [total, setTotal] = useState(0);
   const [page, setPage] = useState(0);
+  const [subtotal, setSubtotal] = useState(0);
+  const [objectList, setObjectList] = useState(ListItems);
 
   return (
     <>
      {page === 0 
       ?
-      <Ecommerce
-        qty = {qty}
-        total = {total}
-        setQty = {setQty}
-        setTotal = {setTotal}
+      <Ecommerce         
         page = {page}
         setPage = {setPage}
+        subtotal={subtotal}
+        setSubtotal={setSubtotal}
+        objectList={objectList}
+        setObjectList={setObjectList}
      />
       :
-      <Basket
-        total = {total} 
+      <Basket        
         setPage={setPage}
+        objectList={objectList}
+        setObjectList={setObjectList}
+        subtotal={subtotal}
+        setSubtotal={setSubtotal}
       />
     }
     </>

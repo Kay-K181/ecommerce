@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { ListItems } from "./listItems";
 
 
-export default function Ecommerce({qty, setQty, total, setTotal, page, setPage}){
 
-    const [objectList, setObjectList] = useState(ListItems);
-    const [subtotal, setSubtotal] = useState(0)       
+
+export default function Ecommerce({setPage, page, subtotal, setSubtotal, objectList, setObjectList}){    
+
     function add(id){   
         const updatedList = objectList.map((item) => {
             if(item.id === id){
@@ -37,7 +36,7 @@ export default function Ecommerce({qty, setQty, total, setTotal, page, setPage})
     }
 
     function checkout(){
-        if(total !== 0){
+        if(subtotal !== 0){
             setPage(1)
         }
     }
@@ -47,12 +46,12 @@ export default function Ecommerce({qty, setQty, total, setTotal, page, setPage})
             return acc + (item.price * item.qty)
         }, 0)
         setSubtotal(updatedTotal);
-    }, [objectList, setTotal]);
+    }, [objectList]);
 
        
     return(
         <div className="eCommerce-wrapper">
-            <h1>Kaymazon Shop</h1>
+            <h1>Kay's Shop</h1>
             <div className="itemsContainer">
                 {objectList.map((info) => (
                     <div className="itemSection" key={info.id}>
@@ -65,7 +64,8 @@ export default function Ecommerce({qty, setQty, total, setTotal, page, setPage})
                     </div>
                 ))}   
             </div> 
-            <div>Subtotal: £{subtotal}</div>        
+            <div className="subtotal">Subtotal: £{subtotal}</div>  
+            <button className="basket" onClick={checkout}>Go to Basket</button>      
         </div>
     )
 }
