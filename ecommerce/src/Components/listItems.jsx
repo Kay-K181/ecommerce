@@ -1,5 +1,5 @@
 
-export const ListItems = [
+ const ListItems = [
     {
         id: 1,
         name: 'Google Pixel 8',
@@ -37,3 +37,4 @@ export const ListItems = [
         qty: 0
     },
 ]
+export default ListItems;
